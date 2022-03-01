@@ -63,6 +63,10 @@ public class Player : MonoBehaviour
         /*
          * フラグがfalseの場合、速度を0にする
          */
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            move += this.transform.up * maxspeed;
+        }
         if (!flag)
         {
             move = Vector3.zero;
